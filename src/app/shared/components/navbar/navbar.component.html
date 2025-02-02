@@ -1,11 +1,30 @@
 <nav>
-<div class="flex h-16 items-center justify-between">
-    <a routerLink="/" routerLinkActive="active">
-        <img src="/logo.png" alt="BG Remover Logo" width="240">
-    </a>
-        <a routerLink="/about" routerLinkActive="active" >About</a>
-        <a routerLink="/pricing" routerLinkActive="active">Pricing</a>
-        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+        <a routerLink="/" routerLinkActive="active" class="flex-shrink-0">
+            <img src="/logo.png" alt="BG Remover Logo" class="h-8 w-auto">
+        </a>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-center space-x-8">
+                    <a routerLink="/about" routerLinkActive="font-semibold text-teal-600" >About</a>
+                    <a routerLink="/pricing" routerLinkActive="font-semibold text-teal-600">Pricing</a>
+                    <a routerLink="/contact" routerLinkActive="font-semibold text-teal-600">Contact</a>
+                </div>
+            </div>
+
+            
+            <div class="-mr-2 flex md:hidden">
+                <button 
+                  type="button" 
+                  class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
+                  aria-label="Open menu"
+                >
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                  </svg>
+                </button>
+              </div>
+    </div>  
 </div>
 </nav>
 <router-outlet/>
